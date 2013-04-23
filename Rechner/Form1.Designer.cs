@@ -45,6 +45,7 @@
             this.btnDiv = new System.Windows.Forms.Button();
             this.btnRes = new System.Windows.Forms.Button();
             this.lblMain = new System.Windows.Forms.Label();
+            this.txtBoxMain = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btn1
@@ -205,21 +206,32 @@
             // 
             // lblMain
             // 
-            this.lblMain.Anchor = System.Windows.Forms.AnchorStyles.Right;
-            this.lblMain.AutoSize = true;
-            this.lblMain.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblMain.Location = new System.Drawing.Point(12, 23);
+            this.lblMain.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.lblMain.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblMain.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblMain.Location = new System.Drawing.Point(13, 9);
             this.lblMain.Name = "lblMain";
-            this.lblMain.Size = new System.Drawing.Size(20, 24);
+            this.lblMain.Size = new System.Drawing.Size(194, 17);
             this.lblMain.TabIndex = 16;
             this.lblMain.Text = "0";
             this.lblMain.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // txtBoxMain
+            // 
+            this.txtBoxMain.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtBoxMain.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBoxMain.Location = new System.Drawing.Point(13, 31);
+            this.txtBoxMain.Name = "txtBoxMain";
+            this.txtBoxMain.Size = new System.Drawing.Size(194, 26);
+            this.txtBoxMain.TabIndex = 17;
+            this.txtBoxMain.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // Rechner
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(217, 209);
+            this.Controls.Add(this.txtBoxMain);
             this.Controls.Add(this.lblMain);
             this.Controls.Add(this.btnRes);
             this.Controls.Add(this.btnDiv);
@@ -264,6 +276,7 @@
         private System.Windows.Forms.Button btnDiv;
         private System.Windows.Forms.Button btnRes;
         private System.Windows.Forms.Label lblMain;
+        private System.Windows.Forms.TextBox txtBoxMain;
     }
 }
 
