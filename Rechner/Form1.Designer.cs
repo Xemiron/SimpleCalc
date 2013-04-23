@@ -1,6 +1,6 @@
 ﻿namespace Rechner
 {
-    partial class Rechner
+    partial class frmMain
     {
         /// <summary>
         /// Erforderliche Designervariable.
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.btn1 = new System.Windows.Forms.Button();
             this.btn2 = new System.Windows.Forms.Button();
             this.btn3 = new System.Windows.Forms.Button();
@@ -46,6 +47,7 @@
             this.btnRes = new System.Windows.Forms.Button();
             this.lblMain = new System.Windows.Forms.Label();
             this.txtBoxMain = new System.Windows.Forms.TextBox();
+            this.btnClr = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btn1
@@ -197,12 +199,13 @@
             // 
             // btnRes
             // 
-            this.btnRes.Location = new System.Drawing.Point(173, 66);
+            this.btnRes.Location = new System.Drawing.Point(173, 101);
             this.btnRes.Name = "btnRes";
-            this.btnRes.Size = new System.Drawing.Size(34, 134);
+            this.btnRes.Size = new System.Drawing.Size(34, 99);
             this.btnRes.TabIndex = 15;
             this.btnRes.Text = "=";
             this.btnRes.UseVisualStyleBackColor = true;
+            this.btnRes.Click += new System.EventHandler(this.btnRes_Click);
             // 
             // lblMain
             // 
@@ -227,11 +230,22 @@
             this.txtBoxMain.Text = "0";
             this.txtBoxMain.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // Rechner
+            // btnClr
+            // 
+            this.btnClr.Location = new System.Drawing.Point(173, 66);
+            this.btnClr.Name = "btnClr";
+            this.btnClr.Size = new System.Drawing.Size(34, 29);
+            this.btnClr.TabIndex = 18;
+            this.btnClr.Text = "C";
+            this.btnClr.UseVisualStyleBackColor = true;
+            this.btnClr.Click += new System.EventHandler(this.btnClr_Click);
+            // 
+            // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(217, 209);
+            this.Controls.Add(this.btnClr);
             this.Controls.Add(this.txtBoxMain);
             this.Controls.Add(this.lblMain);
             this.Controls.Add(this.btnRes);
@@ -250,8 +264,9 @@
             this.Controls.Add(this.btn3);
             this.Controls.Add(this.btn2);
             this.Controls.Add(this.btn1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.Name = "Rechner";
+            this.Name = "frmMain";
             this.Text = "Rechner";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -276,8 +291,9 @@
         private System.Windows.Forms.Button btnMulti;
         private System.Windows.Forms.Button btnDiv;
         private System.Windows.Forms.Button btnRes;
-        private System.Windows.Forms.Label lblMain;
-        private System.Windows.Forms.TextBox txtBoxMain;
+        public System.Windows.Forms.Label lblMain;
+        public System.Windows.Forms.TextBox txtBoxMain;
+        private System.Windows.Forms.Button btnClr;
     }
 }
 

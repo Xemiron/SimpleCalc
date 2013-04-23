@@ -8,9 +8,8 @@ public class GlobalVars
     public static readonly GlobalVars Instance = new GlobalVars();
 
     public string ausgabe = "";
-    public string zahl1 = "";
-    public string zahl2 = "";
-
+    public double eingabe = 0.0;
+    public double ergebnis = 0.0;
 }
 
 
@@ -24,14 +23,19 @@ namespace Rechner
             a.calculate();
         }
 
-        public Program(addNmbr nmbr)
+        public Program(addContent con)
         {
-            nmbr.addNumber("");
+            con.content("", "");
         }
 
-        public Program(plus plus)
+        public Program(plus pl)
         {
-            plus.setNmbrs();
+            pl.setNmbrs("");
+        }
+
+        public Program(clear clr)
+        {
+            clr.clearVars();
         }
 
 
@@ -44,7 +48,7 @@ namespace Rechner
 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Rechner());
+            Application.Run(new frmMain());
 
         }
     }

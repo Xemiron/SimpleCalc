@@ -7,9 +7,20 @@ namespace Rechner
 {
     class plus
     {
-        public void setNmbrs()
-        { 
-        
+        public string setNmbrs(string userIn)
+        {
+
+            if (GlobalVars.Instance.ergebnis != 0.0)
+            {
+                GlobalVars.Instance.ergebnis = GlobalVars.Instance.ergebnis + GlobalVars.Instance.eingabe;
+            }
+
+            else 
+            {
+                GlobalVars.Instance.ergebnis = GlobalVars.Instance.eingabe;
+            }
+
+            return Convert.ToString(GlobalVars.Instance.ergebnis);
         }
     }
 }
