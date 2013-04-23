@@ -224,6 +224,7 @@
             this.txtBoxMain.Name = "txtBoxMain";
             this.txtBoxMain.Size = new System.Drawing.Size(194, 26);
             this.txtBoxMain.TabIndex = 17;
+            this.txtBoxMain.Text = "0";
             this.txtBoxMain.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // Rechner
