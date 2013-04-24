@@ -18,12 +18,12 @@ namespace Rechner
 
             if (GlobalVars.Instance.ausgabe == "")
             {
-                GlobalVars.Instance.ausgabe = userIn;
+                GlobalVars.Instance.ausgabe = userIn + op;
             }
 
             else
             {
-                GlobalVars.Instance.ausgabe = GlobalVars.Instance.ausgabe + op + userIn;
+                GlobalVars.Instance.ausgabe = GlobalVars.Instance.ausgabe + userIn + op;
             }
         }
     }

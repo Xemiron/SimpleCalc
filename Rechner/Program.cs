@@ -8,6 +8,7 @@ public class GlobalVars
     public static readonly GlobalVars Instance = new GlobalVars();
 
     public string ausgabe = "";
+    public string op = "";
     public double eingabe = 0.0;
     public double ergebnis = 0.0;
 }
