@@ -21,6 +21,11 @@ namespace Rechner
                 GlobalVars.Instance.ausgabe = userIn + op;
             }
 
+            else if (GlobalVars.Instance.ausgabe == Convert.ToString(GlobalVars.Instance.ergebnis))
+            {
+                GlobalVars.Instance.ausgabe = GlobalVars.Instance.ausgabe + op;
+            }
+
             else
             {
                 GlobalVars.Instance.ausgabe = GlobalVars.Instance.ausgabe + userIn + op;

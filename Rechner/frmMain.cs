@@ -20,21 +20,29 @@ namespace Rechner
         private void btnPlus_Click(object sender, EventArgs e)
         {
             addContent con = new addContent();
-            Program c = new Program(con);
+            //Program c = new Program(con);
 
             plus pl = new plus();
             Program pa = new Program(pl);
 
             calc cl = new calc();
-            Program p = new Program(cl);
+            //Program p = new Program(cl);
             //--------------------------------
 
             GlobalVars.Instance.eingabe = Convert.ToDouble(txtBoxMain.Text);
             GlobalVars.Instance.op = "plus";
 
             con.content(txtBoxMain.Text, "plus");
-            //pl.setNmbrs(txtBoxMain.Text);
-            cl.calculate();
+
+            if (GlobalVars.Instance.ergebnis == 0.0)
+            {
+                GlobalVars.Instance.ergebnis = GlobalVars.Instance.eingabe;
+            }
+
+            else 
+            {
+                cl.calculate();
+            }
 
             lblMain.Text = GlobalVars.Instance.ausgabe;
         }
@@ -102,7 +110,9 @@ namespace Rechner
         private void btnRes_Click(object sender, EventArgs e)
         {
             calc cl = new calc();
-            Program p = new Program(cl);
+            //Program p = new Program(cl);
+
+            GlobalVars.Instance.eingabe = Convert.ToDouble(txtBoxMain.Text);
 
             cl.calculate();
 
