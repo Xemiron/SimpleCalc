@@ -9,13 +9,28 @@ using System.Windows.Forms;
 
 namespace Rechner
 {
-    public partial class frmMain : Form
+    public partial class Form1 : Form
     {
-        public frmMain()
+        public Form1()
         {
             InitializeComponent();
         }
 
+        private void Form1_Load(object sender, System.EventArgs e)
+        {
+            this.txtBoxMain.Focus();
+            this.KeyPreview = true;
+        }
+
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if (keyData == (Keys.Oemplus))
+            {
+                btnPlus.PerformClick();
+            }
+
+            return base.ProcessCmdKey(ref msg, keyData);
+        }
 
         private void btnPlus_Click(object sender, EventArgs e)
         {
@@ -33,6 +48,8 @@ namespace Rechner
 
             lblMain.Text = GlobalVars.Instance.ausgabe;
             txtBoxMain.Text = "";
+
+            txtBoxMain.Focus();
         }
 
         private void btnMinus_Click(object sender, EventArgs e)
@@ -51,6 +68,8 @@ namespace Rechner
 
             lblMain.Text = GlobalVars.Instance.ausgabe;
             txtBoxMain.Text = "";
+
+            txtBoxMain.Focus();
         }
 
         private void btnMulti_Click(object sender, EventArgs e)
@@ -69,6 +88,8 @@ namespace Rechner
 
             lblMain.Text = GlobalVars.Instance.ausgabe;
             txtBoxMain.Text = "";
+
+            txtBoxMain.Focus();
         }
 
         private void btnDiv_Click(object sender, EventArgs e)
@@ -148,6 +169,8 @@ namespace Rechner
 
             lblMain.Text = "0";
             txtBoxMain.Text = "0";
+
+            txtBoxMain.Focus();
         }
 
         private void btnRes_Click(object sender, EventArgs e)

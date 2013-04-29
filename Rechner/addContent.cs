@@ -7,7 +7,7 @@ namespace Rechner
 {
     class addContent
     {
-        frmMain objFrm = new frmMain();
+        Form1 objFrm = new Form1();
 
         public void content(string userIn, string op)  
         {

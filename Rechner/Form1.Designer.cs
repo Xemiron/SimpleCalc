@@ -1,6 +1,6 @@
 ﻿namespace Rechner
 {
-    partial class frmMain
+    partial class Form1
     {
         /// <summary>
         /// Erforderliche Designervariable.
@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.btn1 = new System.Windows.Forms.Button();
             this.btn2 = new System.Windows.Forms.Button();
             this.btn3 = new System.Windows.Forms.Button();
@@ -219,7 +219,6 @@
             this.lblMain.Name = "lblMain";
             this.lblMain.Size = new System.Drawing.Size(194, 17);
             this.lblMain.TabIndex = 16;
-            this.lblMain.Text = "0";
             this.lblMain.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // txtBoxMain
@@ -228,8 +227,9 @@
             this.txtBoxMain.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBoxMain.Location = new System.Drawing.Point(13, 31);
             this.txtBoxMain.Name = "txtBoxMain";
+            this.txtBoxMain.ShortcutsEnabled = false;
             this.txtBoxMain.Size = new System.Drawing.Size(194, 26);
-            this.txtBoxMain.TabIndex = 17;
+            this.txtBoxMain.TabIndex = 0;
             this.txtBoxMain.Text = "0";
             this.txtBoxMain.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
@@ -243,7 +243,7 @@
             this.btnClr.UseVisualStyleBackColor = true;
             this.btnClr.Click += new System.EventHandler(this.btnClr_Click);
             // 
-            // frmMain
+            // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -269,7 +269,7 @@
             this.Controls.Add(this.btn1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MaximizeBox = false;
-            this.Name = "frmMain";
+            this.Name = "Form1";
             this.Text = "Rechner";
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -294,9 +294,9 @@
         private System.Windows.Forms.Button btnMulti;
         private System.Windows.Forms.Button btnDiv;
         private System.Windows.Forms.Button btnRes;
+        private System.Windows.Forms.Button btnClr;
         public System.Windows.Forms.Label lblMain;
         public System.Windows.Forms.TextBox txtBoxMain;
-        private System.Windows.Forms.Button btnClr;
     }
 }
 
