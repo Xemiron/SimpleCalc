@@ -20,32 +20,75 @@ namespace Rechner
         private void btnPlus_Click(object sender, EventArgs e)
         {
             addContent con = new addContent();
-            //Program c = new Program(con);
-
-            plus pl = new plus();
-            Program pa = new Program(pl);
-
             calc cl = new calc();
-            //Program p = new Program(cl);
             //--------------------------------
 
             GlobalVars.Instance.eingabe = Convert.ToDouble(txtBoxMain.Text);
-            GlobalVars.Instance.op = "plus";
 
             con.content(txtBoxMain.Text, "plus");
 
-            if (GlobalVars.Instance.ergebnis == 0.0)
-            {
-                GlobalVars.Instance.ergebnis = GlobalVars.Instance.eingabe;
-            }
+            cl.calculate();
 
-            else 
-            {
-                cl.calculate();
-            }
+            GlobalVars.Instance.op = "plus";
 
             lblMain.Text = GlobalVars.Instance.ausgabe;
+            txtBoxMain.Text = "";
         }
+
+        private void btnMinus_Click(object sender, EventArgs e)
+        {
+            addContent con = new addContent();
+            calc cl = new calc();
+            //--------------------------------
+
+            GlobalVars.Instance.eingabe = Convert.ToDouble(txtBoxMain.Text);
+
+            con.content(txtBoxMain.Text, "minus");
+
+            cl.calculate();
+
+            GlobalVars.Instance.op = "minus";
+
+            lblMain.Text = GlobalVars.Instance.ausgabe;
+            txtBoxMain.Text = "";
+        }
+
+        private void btnMulti_Click(object sender, EventArgs e)
+        {
+            addContent con = new addContent();
+            calc cl = new calc();
+            //--------------------------------
+
+            GlobalVars.Instance.eingabe = Convert.ToDouble(txtBoxMain.Text);
+
+            con.content(txtBoxMain.Text, "multi");
+
+            cl.calculate();
+
+            GlobalVars.Instance.op = "multi";
+
+            lblMain.Text = GlobalVars.Instance.ausgabe;
+            txtBoxMain.Text = "";
+        }
+
+        private void btnDiv_Click(object sender, EventArgs e)
+        {
+            addContent con = new addContent();
+            calc cl = new calc();
+            //--------------------------------
+
+            GlobalVars.Instance.eingabe = Convert.ToDouble(txtBoxMain.Text);
+
+            con.content(txtBoxMain.Text, "div");
+
+            cl.calculate();
+
+            GlobalVars.Instance.op = "div";
+
+            lblMain.Text = GlobalVars.Instance.ausgabe;
+            txtBoxMain.Text = "";
+        }
+
 
         private void btn1_Click_1(object sender, EventArgs e)
         {
@@ -110,21 +153,18 @@ namespace Rechner
         private void btnRes_Click(object sender, EventArgs e)
         {
             calc cl = new calc();
-            //Program p = new Program(cl);
 
             GlobalVars.Instance.eingabe = Convert.ToDouble(txtBoxMain.Text);
 
             cl.calculate();
-
-            GlobalVars.Instance.ausgabe = Convert.ToString(GlobalVars.Instance.ergebnis);
-            lblMain.Text = GlobalVars.Instance.ausgabe;
-
+            
             txtBoxMain.Text = Convert.ToString(GlobalVars.Instance.ergebnis);
+            
+            GlobalVars.Instance.eingabe = 0.0;
+            GlobalVars.Instance.ergebnis = 0.0;
+            GlobalVars.Instance.ausgabe = "";
+
+            lblMain.Text = GlobalVars.Instance.ausgabe;
         }
-
-
-
-
-       
     }
 }

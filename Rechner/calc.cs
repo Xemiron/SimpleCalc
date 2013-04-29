@@ -9,23 +9,34 @@ namespace Rechner
     {
         public void calculate()
         {
-
-            switch (GlobalVars.Instance.op)
-            { 
-                case "plus":
-
-                    if (GlobalVars.Instance.ergebnis == 0.0)
-                    {
-                        GlobalVars.Instance.ergebnis = GlobalVars.Instance.eingabe;
-                    }
-
-                    else
-                    {
-                        GlobalVars.Instance.ergebnis = GlobalVars.Instance.ergebnis + GlobalVars.Instance.eingabe;
-                    }
-                    break;
-            
+            if (GlobalVars.Instance.ergebnis == 0.0)
+            {
+                GlobalVars.Instance.ergebnis = GlobalVars.Instance.eingabe;
             }
+
+            else
+            {
+
+                switch (GlobalVars.Instance.op)
+                {
+                    case "plus":
+                        GlobalVars.Instance.ergebnis = GlobalVars.Instance.ergebnis + GlobalVars.Instance.eingabe;
+                        break;
+
+                    case "minus":
+                        GlobalVars.Instance.ergebnis = GlobalVars.Instance.ergebnis - GlobalVars.Instance.eingabe;
+                        break;
+
+                    case "multi":
+                        GlobalVars.Instance.ergebnis = GlobalVars.Instance.ergebnis * GlobalVars.Instance.eingabe;
+                        break;
+
+                    case "div":
+                        GlobalVars.Instance.ergebnis = GlobalVars.Instance.ergebnis / GlobalVars.Instance.eingabe;
+                        break;
+                }
+            }
+            GlobalVars.Instance.eingabe = 0.0;
         }
     }
 }

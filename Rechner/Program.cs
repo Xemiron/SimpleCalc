@@ -29,16 +29,6 @@ namespace Rechner
             con.content("", "");
         }
 
-        public Program(plus pl)
-        {
-            pl.setNmbrs("");
-        }
-
-        public Program(clear clr)
-        {
-            clr.clearVars();
-        }
-
 
         /// <summary>
         /// Der Haupteinstiegspunkt für die Anwendung.
