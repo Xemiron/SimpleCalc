@@ -108,6 +108,8 @@ namespace Rechner
 
             lblMain.Text = GlobalVars.Instance.ausgabe;
             txtBoxMain.Text = "";
+
+            txtBoxMain.Focus();
         }
 
 
